@@ -194,8 +194,6 @@ void MainWindow::UpdateUI() {
     ui->push_button_duplicate->setEnabled(environment.UseOverride() && has_select_configuration);
     ui->push_button_new->setEnabled(environment.UseOverride());
     ui->settings_tree->setEnabled(environment.UseOverride() && has_select_configuration);
-    ui->group_box_settings->setTitle(has_select_configuration ? (active_contiguration_name + " Settings").c_str()
-                                                              : "Configuration Settings");
 
     // Handle application lists states
     ui->check_box_apply_list->setEnabled(!been_warned_about_old_loader && environment.UseOverride());
